@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": false,
+    "declaration": true,
+    "noEmitHelpers": false,
+    "outDir": "dist",
+    "rootDir": "src",
+    "typeRoots": [
+      "../node_modules/@types"
+    ]
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "files": [
+    "node_modules/typescript/lib/lib.es6.d.ts",
+    "src/index.ts",
+    "src/rebirth-event-source.module.ts",
+    "src/rebirth-event-source.service.ts"
+  ],
+  "compileOnSave": false,
+  "buildOnSave": false,
+  "atom": {
+    "rewriteTsconfig": false
+  },
+  "angularCompilerOptions": {
+    "genDir": "aot",
+    "strictMetadataEmit": true,
+    "debug": false
+  }
+}
