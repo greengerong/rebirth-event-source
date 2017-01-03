@@ -17,7 +17,7 @@ npm install rebirth-event-source --save
 
 ## How to use?
 
-### Register `EventSourceModule`
+### Register `RebirthEventSourceModule`
 
 ```typescript
     import { RebirthEventSourceModule } from 'rebirth-event-source';
