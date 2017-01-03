@@ -20,12 +20,12 @@ npm install rebirth-event-source --save
 ### Register `EventSourceModule`
 
 ```typescript
-    import { EventSourceModule } from 'rebirth-event-source';
+    import { RebirthEventSourceModule } from 'rebirth-event-source';
     
     @NgModule({
       imports: [
         BrowserModule,
-        EventSourceModule
+        RebirthEventSourceModule
       ],
       declarations: [
         AppComponent
@@ -43,4 +43,24 @@ npm install rebirth-event-source --save
 
     platformBrowserDynamic().bootstrapModule(AppModule)
 ```
-   
+
+```typescript
+    import { RebirthEventSource } from 'rebirth-event-source';
+
+    @Component({
+      selector: 'app',
+      template: '<router-outlet></router-outlet>'
+    })
+    export class AppComponent {
+    
+      constructor(private eventSource: RebirthEventSource) {
+    
+        eventSource.on("test")
+          .subscribe(console.log);
+    
+       eventSource.broadcast("test", { msg: '************demo************' });
+ 
+      }
+    }
+
+```
