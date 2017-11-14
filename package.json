@@ -1,14 +1,10 @@
 {
   "name": "rebirth-event-source",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "author": "greengerong<grzx2210@163.com>",
   "description": "ng2 event source by rxjs",
   "main": "index.js",
   "typings": "index.d.ts",
-  "files": [
-    "dist",
-    "src"
-  ],
   "scripts": {
     "ngc": "ngc -p . && cp package.json ./dist",
     "watch": "tsc --watch",
