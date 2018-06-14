@@ -15,9 +15,6 @@ require('core-js/es7/reflect');
 // Typescript emit helpers polyfill
 require('ts-helpers');
 
-// RxJS
-require('rxjs/Rx');
-
 /*
  * Ok, this is kinda crazy. We can use the the context method on
  * require that webpack created in order to tell webpack

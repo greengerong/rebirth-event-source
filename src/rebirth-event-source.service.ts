@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import { Subject } from 'rxjs/Subject';
-import 'rxjs/add/operator/filter';
-import 'rxjs/add/operator/map';
+import { Observable, Subject } from 'rxjs';
+import { filter, map } from 'rxjs/operators';
 
 interface BroadcastEvent {
     key: any;
@@ -24,8 +22,10 @@ export class RebirthEventSource {
 
     on<T>(key: any): Observable<T> {
         return this._eventBus.asObservable()
-            .filter(event => event.key === key)
-            .map(event => <T>event.data);
+            .pipe(
+                filter(event => event.key === key),
+                map(event => <T>event.data)
+            );
     }
 
 }
